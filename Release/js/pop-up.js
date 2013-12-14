@@ -1,7 +1,8 @@
 //basic fancybox setup
 	function validateEmail(email) { 
-		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return reg.test(email);
+		/*var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		*/var reg = /^\D+$/;
+	    return reg.test(email);
 	}
 
 	$(document).ready(function() {
@@ -41,7 +42,7 @@
 					success: function(data) {
 						if(data == "true") {
 							$("#contact").fadeOut("fast", function(){
-								$(this).before("<p><strong>Success! Your feedback has been sent, thanks :)</strong></p>");
+								$(this).before("<p><strong>Спасибо. С вами свяжуться в течении часа.</strong></p>");
 								setTimeout("$.fancybox.close()", 1000);
 							});
 						}
