@@ -14,6 +14,10 @@
 <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.0.6"></script>
 <script src="js/pop-up.js"></script>
 
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/is.mobile.js"></script>
+<script src="js/script.js"></script>
+
 
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
@@ -26,14 +30,14 @@
   <div>
     <div class="subpages-nav">
       <nav>
-        <ul class="menu">
-         <li class="li-none"><a href="index.html">Главная</a></li>
-          <li class="current"><a href="o-nas.html">О нас</a></li>
+	  <ul class="menu">
+          <li class="li-none"><a href="index.html">Главная</a></li>
           <li><a href="foto-tatuazh.html">Фото</a></li>
-          <li class="li-left li-none"><a href="uslugi.html">Услуги</a></li>
-          <li><a href="ceni.html">Цены</a></li>
+		  <li><a href="ceni.html">Цены</a></li>
+          <li class="current li-left li-none"><a href="otzivi.html">Отзывы</a></li>
+          <li><a href="akcii.html">Акции</a></li>
           <li><a href="kontakti.html">Контакты</a></li>
-        </ul>
+      </ul>
         <h1><a class="modalbox" href="#inline"><img src="images/logo.png" alt=""></a></h1>
       </nav>
     </div>
@@ -77,28 +81,33 @@
   </div>
 </section>
 <!--==============================footer=================================-->
-<footer> <span><strong>© 2013 Салон татуажа</strong><br>
-  <!--Website Template by <a target="_blank" href="http://www.templatemonster.com/" class="link-2">TemplateMonster.com</a></span> -->
-  </footer>
+<footer> <span><strong>Copyright © 2014 Салон татуажа. | Все права защищены.</strong><br></footer>
 </body>
 </html>
 
 
 
 
-
 <!-- hidden inline form -->
 <div id="inline">
-	<h2>Send us a Message</h2>
-
-	<form id="contact" name="contact" action="#" method="post">
-		<label for="email">Your E-mail</label>
-		<input type="email" id="email" name="email" class="txt">
+	<div class="comment">
+	<h2>Оставьте заявку</h2>
+	<h3>и мы вам перезвоним.</h3>
+	</div>
+<br>
+	<form id="contact" name="contact" action="#" method="post" class="phone_form">
+		<label for="name">Ваше имя:</label>
+		<input type="name" id="name" name="name" class="txt" >
 		<br>
-		<label for="msg">Enter a Message</label>
-		<textarea id="msg" name="msg" class="txtarea"></textarea>
-		
-		<button id="send">Send E-mail</button>
+		<div class="user_phone">
+		<label for="user_phone">Телефон:</label>
+		<input type="phone" required pattern="[0-9_-]{10}" placeholder="(___) ___ __ __" id="user_phone" name= "phone" title="Формат: (096) 999 99 99" />
+		</div>
+		<br>
+		<button id="send">Отправить</button>
 	</form>
 </div>
 <!-- hidden inline form -->
+
+
+<div style="position: fixed; top: 30%; left:0%; z-index:2;"><a target="_blank" class="switch-a-img" href="https://vk.com/write17914100"></a></div>
